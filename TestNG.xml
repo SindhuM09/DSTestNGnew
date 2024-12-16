@@ -1,0 +1,35 @@
+<suite name="Suite1">
+
+	<test  name="TestChrome"  thread-count = "2">
+
+		<parameter name="browser" value="chrome" />
+
+		<classes>
+
+			<class name="tests.LoginTestCases"></class>
+			<class name="tests.HomeTestCases"></class>
+			<class name="tests.StackTestcases"></class>
+			<class name="tests.DSIntroTestCases"></class>
+		</classes>
+
+	</test>
+	 
+	<test  name="TestEdge"  thread-count = "2">
+
+		<parameter name="browser" value="edge" />
+<classes>
+
+			<class name="tests.LoginTestCases"></class>
+			<class name="tests.HomeTestCases"></class>
+			<class name="tests.StackTestcases"></class>
+			<class name="tests.DSIntroTestCases"></class>
+		</classes>
+		
+
+	</test>--> 
+
+</suite>
+
+
+
+

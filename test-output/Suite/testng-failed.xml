@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test thread-count="5" name="TestChrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="tests.HomeTestCases">
+        <methods>
+          <include name="user_clicks_the_array_get_started_button"/>
+          <include name="user_clicks_the_data_struct_get_started_button"/>
+          <include name="setup"/>
+          <include name="user_is_in_the_home_page"/>
+          <include name="user_navigated_to_data_struct_page"/>
+          <include name="the_user_clicks_on_the_data_structure_dropdown_icon"/>
+          <include name="user_navigated_to_error_home_page"/>
+        </methods>
+      </class> <!-- tests.HomeTestCases -->
+    </classes>
+  </test> <!-- TestChrome(failed) -->
+</suite> <!-- Failed suite [Suite] -->

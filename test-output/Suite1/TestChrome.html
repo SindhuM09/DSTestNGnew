@@ -1,0 +1,499 @@
+<html>
+<head>
+<title>TestNG:  TestChrome</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>TestChrome</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>32/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Dec 14 12:23:20 EST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>517 seconds (517632 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.StackTestcases.tearDown()'><b>tearDown</b><br>Test class: tests.StackTestcases</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null
+	at tests.BaseCases.tearDown(BaseCases.java:88)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace228236442", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace228236442'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null
+	at tests.BaseCases.tearDown(BaseCases.java:88)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassConfigurations(TestMethodWorker.java:238)
+	at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:223)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:137)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>tests.StackTestcases@79c7532f</td></tr>
+<tr>
+<td title='tests.LoginTestCases.user_clicks_on_logout_link()'><b>user_clicks_on_logout_link</b><br>Test class: tests.LoginTestCases</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Sign out&quot;}
+  (Session info: chrome=131.0.6778.140)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.1&apos;, revision: &apos;656257d8e9&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bbef2449a34317dce88ff2cd134f4637, findElement {value=Sign out, using=link text}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\leonv\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52195}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52195/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bbef2449a34317dce88ff2cd134f4637
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
+	at pageObject.Homepageobject.clickLogout(Homepageobject.java:109)
+	at tests.LoginTestCases.user_clicks_on_logout_link(LoginTestCases.java:100)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace881699406", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace881699406'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Sign out&quot;}
+  (Session info: chrome=131.0.6778.140)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.1&apos;, revision: &apos;656257d8e9&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bbef2449a34317dce88ff2cd134f4637, findElement {value=Sign out, using=link text}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\leonv\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52195}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52195/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bbef2449a34317dce88ff2cd134f4637
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
+	at pageObject.Homepageobject.clickLogout(Homepageobject.java:109)
+	at tests.LoginTestCases.user_clicks_on_logout_link(LoginTestCases.java:100)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassConfigurations(TestMethodWorker.java:238)
+	at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:223)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:137)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>tests.LoginTestCases@38831718</td></tr>
+<tr>
+<td title='tests.DSIntroTestCases.tearDown()'><b>tearDown</b><br>Test class: tests.DSIntroTestCases</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null
+	at tests.BaseCases.tearDown(BaseCases.java:88)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1953386296", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1953386296'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null
+	at tests.BaseCases.tearDown(BaseCases.java:88)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassConfigurations(TestMethodWorker.java:238)
+	at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:223)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:137)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>tests.DSIntroTestCases@2a448449</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.LoginTestCases.tearDown()'><b>tearDown</b><br>Test class: tests.LoginTestCases</td>
+<td></td>
+<td>0</td>
+<td>tests.LoginTestCases@38831718</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.HomeTestCases.clickRegisterLink()'><b>clickRegisterLink</b><br>Test class: tests.HomeTestCases</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.linkText: Register (tried for 500 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pageObject.Homepageobject.clickRegister(Homepageobject.java:63)
+	at tests.HomeTestCases.clickRegisterLink(HomeTestCases.java:159)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Register&quot;}
+  (Session info: chrome=131.0.6778.140)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.1&apos;, revision: &apos;656257d8e9&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a674bbf4fbe545e0fcec5019d44b4308, findElement {value=Register, using=link text}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\leonv\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52194}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52194/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a674bbf4fbe545e0fcec5019d44b4308
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 18 more
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace288490597", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace288490597'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.linkText: Register (tried for 500 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pageObject.Homepageobject.clickRegister(Homepageobject.java:63)
+	at tests.HomeTestCases.clickRegisterLink(HomeTestCases.java:159)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Register&quot;}
+  (Session info: chrome=131.0.6778.140)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.1&apos;, revision: &apos;656257d8e9&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a674bbf4fbe545e0fcec5019d44b4308, findElement {value=Register, using=link text}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\leonv\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52194}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52194/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a674bbf4fbe545e0fcec5019d44b4308
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 18 more
+</pre></div></td>
+<td>500</td>
+<td>tests.HomeTestCases@5674e1f2</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.HomeTestCases.VerifyBeforeQueueDSgetStarted()'><b>VerifyBeforeQueueDSgetStarted</b><br>Test class: tests.HomeTestCases</td>
+<td></td>
+<td>0</td>
+<td>tests.HomeTestCases@5674e1f2</td></tr>
+<tr>
+<td title='tests.StackTestcases.userclickspractice_question_link()'><b>userclickspractice_question_link</b><br>Test class: tests.StackTestcases</td>
+<td></td>
+<td>0</td>
+<td>tests.StackTestcases@79c7532f</td></tr>
+<tr>
+<td title='tests.StackTestcases.Implementationtryhere()'><b>Implementationtryhere</b><br>Test class: tests.StackTestcases</td>
+<td></td>
+<td>0</td>
+<td>tests.StackTestcases@79c7532f</td></tr>
+<tr>
+<td title='tests.StackTestcases.ApplicationsTryHere()'><b>ApplicationsTryHere</b><br>Test class: tests.StackTestcases</td>
+<td></td>
+<td>0</td>
+<td>tests.StackTestcases@79c7532f</td></tr>
+<tr>
+<td title='tests.DSIntroTestCases.executeImplementationTryHere()'><b>executeImplementationTryHere</b><br>Test class: tests.DSIntroTestCases</td>
+<td></td>
+<td>0</td>
+<td>tests.DSIntroTestCases@2a448449</td></tr>
+<tr>
+<td title='tests.HomeTestCases.VerifyBeforeGraphDSgetStarted()'><b>VerifyBeforeGraphDSgetStarted</b><br>Test class: tests.HomeTestCases</td>
+<td></td>
+<td>0</td>
+<td>tests.HomeTestCases@5674e1f2</td></tr>
+<tr>
+<td title='tests.StackTestcases.executeImplementationTryHere()'><b>executeImplementationTryHere</b><br>Test class: tests.StackTestcases</td>
+<td></td>
+<td>0</td>
+<td>tests.StackTestcases@79c7532f</td></tr>
+<tr>
+<td title='tests.LoginTestCases.checkInvalidUsernamePassword()'><b>checkInvalidUsernamePassword</b><br>Test class: tests.LoginTestCases</td>
+<td></td>
+<td>0</td>
+<td>tests.LoginTestCases@38831718</td></tr>
+<tr>
+<td title='tests.HomeTestCases.clicksGetStartedButton()'><b>clicksGetStartedButton</b><br>Test class: tests.HomeTestCases</td>
+<td></td>
+<td>0</td>
+<td>tests.HomeTestCases@5674e1f2</td></tr>
+<tr>
+<td title='tests.StackTestcases.OperationsinStackLink()'><b>OperationsinStackLink</b><br>Test class: tests.StackTestcases</td>
+<td></td>
+<td>0</td>
+<td>tests.StackTestcases@79c7532f</td></tr>
+<tr>
+<td title='tests.HomeTestCases.VerifyBeforeArraygetStarted()'><b>VerifyBeforeArraygetStarted</b><br>Test class: tests.HomeTestCases</td>
+<td></td>
+<td>0</td>
+<td>tests.HomeTestCases@5674e1f2</td></tr>
+<tr>
+<td title='tests.StackTestcases.Implementation()'><b>Implementation</b><br>Test class: tests.StackTestcases</td>
+<td></td>
+<td>0</td>
+<td>tests.StackTestcases@79c7532f</td></tr>
+<tr>
+<td title='tests.HomeTestCases.VerifyBeforeLoginDSgetStarted()'><b>VerifyBeforeLoginDSgetStarted</b><br>Test class: tests.HomeTestCases</td>
+<td></td>
+<td>0</td>
+<td>tests.HomeTestCases@5674e1f2</td></tr>
+<tr>
+<td title='tests.StackTestcases.operationtryhere()'><b>operationtryhere</b><br>Test class: tests.StackTestcases</td>
+<td></td>
+<td>0</td>
+<td>tests.StackTestcases@79c7532f</td></tr>
+<tr>
+<td title='tests.StackTestcases.Applications()'><b>Applications</b><br>Test class: tests.StackTestcases</td>
+<td></td>
+<td>0</td>
+<td>tests.StackTestcases@79c7532f</td></tr>
+<tr>
+<td title='tests.StackTestcases.executeApplicationsTryHere()'><b>executeApplicationsTryHere</b><br>Test class: tests.StackTestcases</td>
+<td></td>
+<td>0</td>
+<td>tests.StackTestcases@79c7532f</td></tr>
+<tr>
+<td title='tests.HomeTestCases.checkLinkedGetStartedButton()'><b>checkLinkedGetStartedButton</b><br>Test class: tests.HomeTestCases</td>
+<td></td>
+<td>0</td>
+<td>tests.HomeTestCases@5674e1f2</td></tr>
+<tr>
+<td title='tests.LoginTestCases.checkEmptyUsername()'><b>checkEmptyUsername</b><br>Test class: tests.LoginTestCases</td>
+<td></td>
+<td>1</td>
+<td>tests.LoginTestCases@38831718</td></tr>
+<tr>
+<td title='tests.StackTestcases.executeoperationsTryHere()'><b>executeoperationsTryHere</b><br>Test class: tests.StackTestcases</td>
+<td></td>
+<td>0</td>
+<td>tests.StackTestcases@79c7532f</td></tr>
+<tr>
+<td title='tests.HomeTestCases.checkQueueGetStartedButton()'><b>checkQueueGetStartedButton</b><br>Test class: tests.HomeTestCases</td>
+<td></td>
+<td>0</td>
+<td>tests.HomeTestCases@5674e1f2</td></tr>
+<tr>
+<td title='tests.HomeTestCases.checkTreeGetStartedButton()'><b>checkTreeGetStartedButton</b><br>Test class: tests.HomeTestCases</td>
+<td></td>
+<td>0</td>
+<td>tests.HomeTestCases@5674e1f2</td></tr>
+<tr>
+<td title='tests.DSIntroTestCases.DSintro()'><b>DSintro</b><br>Test class: tests.DSIntroTestCases</td>
+<td></td>
+<td>0</td>
+<td>tests.DSIntroTestCases@2a448449</td></tr>
+<tr>
+<td title='tests.HomeTestCases.user_clicks_on_sign_in_link()'><b>user_clicks_on_sign_in_link</b><br>Test class: tests.HomeTestCases</td>
+<td></td>
+<td>1</td>
+<td>tests.HomeTestCases@5674e1f2</td></tr>
+<tr>
+<td title='tests.LoginTestCases.checkCorrectUsernamePassword()'><b>checkCorrectUsernamePassword</b><br>Test class: tests.LoginTestCases</td>
+<td></td>
+<td>0</td>
+<td>tests.LoginTestCases@38831718</td></tr>
+<tr>
+<td title='tests.HomeTestCases.checkArrayGetStartedButton()'><b>checkArrayGetStartedButton</b><br>Test class: tests.HomeTestCases</td>
+<td></td>
+<td>1</td>
+<td>tests.HomeTestCases@5674e1f2</td></tr>
+<tr>
+<td title='tests.HomeTestCases.VerifyBeforeLinkedDSgetStarted()'><b>VerifyBeforeLinkedDSgetStarted</b><br>Test class: tests.HomeTestCases</td>
+<td></td>
+<td>0</td>
+<td>tests.HomeTestCases@5674e1f2</td></tr>
+<tr>
+<td title='tests.HomeTestCases.checkStackGetStartedButton()'><b>checkStackGetStartedButton</b><br>Test class: tests.HomeTestCases</td>
+<td></td>
+<td>0</td>
+<td>tests.HomeTestCases@5674e1f2</td></tr>
+<tr>
+<td title='tests.HomeTestCases.VerifyBeforeStackDSgetStarted()'><b>VerifyBeforeStackDSgetStarted</b><br>Test class: tests.HomeTestCases</td>
+<td></td>
+<td>0</td>
+<td>tests.HomeTestCases@5674e1f2</td></tr>
+<tr>
+<td title='tests.DSIntroTestCases.TimeComplexityLink()'><b>TimeComplexityLink</b><br>Test class: tests.DSIntroTestCases</td>
+<td></td>
+<td>1</td>
+<td>tests.DSIntroTestCases@2a448449</td></tr>
+<tr>
+<td title='tests.HomeTestCases.checkGraphGetStartedButton()'><b>checkGraphGetStartedButton</b><br>Test class: tests.HomeTestCases</td>
+<td></td>
+<td>0</td>
+<td>tests.HomeTestCases@5674e1f2</td></tr>
+<tr>
+<td title='tests.HomeTestCases.VerifyBeforeTreeDSgetStarted()'><b>VerifyBeforeTreeDSgetStarted</b><br>Test class: tests.HomeTestCases</td>
+<td></td>
+<td>0</td>
+<td>tests.HomeTestCases@5674e1f2</td></tr>
+<tr>
+<td title='tests.DSIntroTestCases.DSintrotryhere()'><b>DSintrotryhere</b><br>Test class: tests.DSIntroTestCases</td>
+<td></td>
+<td>0</td>
+<td>tests.DSIntroTestCases@2a448449</td></tr>
+</table><p>
+</body>
+</html>
